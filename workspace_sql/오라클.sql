@@ -32,7 +32,7 @@ select deptno from emp;
 
 select /*distinct*/ job, deptno 
 from emp;
-
+--아리
 select sal 월급, sal*10 "연 봉" from emp;
 
 -- sal 컬럼을 기준으로 오름차순 - 작은 것 부터 큰 것 순서로
