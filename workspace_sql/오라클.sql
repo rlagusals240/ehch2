@@ -55,6 +55,9 @@ selct * from emp order by deptno asc, sal desc
 select * from emp 
 order by deptno desc, sal asc, empno desc; 
 
+-- 부서번호로 오름차순, 겹치면 sal 내림차순
 
 
--- deptno asc, sal desc; 이 상황에서 연봉 사원번호 내림차순 정렬
+
+
+-- deptno asc, sal
