@@ -1,0 +1,31 @@
+package sec01.exam01;
+
+public class KeyCodeExam {
+
+	public static void main(String[] args) {
+		
+		System.out.println(1);
+		System.out.println(2);
+
+		System.out.print(3);
+	   System.out.print(4);
+	
+	   System.out.println(5);
+	   System.out.println(6);
+
+	   System.out.printf("이름: %s", "감자바");
+	  System.out.println();
+	   System.out.printf("이름: %s, 나이: %d", "감자바",25);
+	   System.out.println();
+	   
+	   System.out.printf("이름: %6s, 나이: %d", "감자바",25);
+	   System.out.println();
+	}
+	
+	
+	
+	 
+	
+	
+     
+}
