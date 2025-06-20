@@ -1,0 +1,95 @@
+
+        #pixel .box1 .box2 {
+            font-size: 30px;
+        }
+
+        #pixel .box1 .box2 {
+            font-size: 16px;
+        }
+        
+        #pixel .box1 .box2 {
+            font-size: 150px;
+        }
+
+        
+ #pixel .box1{
+            font-size: 16px;
+
+            background-color: rgba(221, 14, 14, 0);
+        }
+
+        #pixel .box1 .box2 {
+            font-size: 30px;
+            background-color: rgb(0, 0, 255,0.5);
+        }
+        
+        #pixel .box1 .box2 .box3 {
+            font-size: 150px;
+        }
+
+        /* 크기가 점점 커지는 것 */
+        #percent .box1{
+            font-size: 150%;
+            background-color: #a47864;
+        }
+
+        #percent .box1 .box2 {
+            font-size: 150%;
+            background-color: #0000ffff;
+        }
+        
+        #percent .box1 .box2 .box3 {
+            font-size: 150%;
+        }
+
+        /* em은 %와 같음 100% 1em이랑 똑같음 */
+        #em .box1{
+            font-size: 1.5em;
+            border:1px solid red;
+            margin: 10px;
+        }
+
+        #em .box1 .box2 {
+            font-size: 1.5em;
+            border:1px solid red;
+            margin: 10px;
+        }
+        
+        #em .box1 .box2 .box3 {
+            font-size: 1.5em;
+        }
+
+        #em .box1{
+            font-size: 1.5em;
+            border:1px solid red;
+            margin: 10px;
+        }
+
+        #em .box1 .box2 {
+            font-size: 1.5em;
+            border:1px solid red;
+            margin: 10px;
+        }
+        
+        #em .box1 .box2 .box3 {
+            font-size: 1.5em;
+        }
+
+        #v1, #v2, #v3, #v4 {
+             border:1px solid rgb(8, 12, 229);
+            margin: 10px;
+        }
+
+        /* viewport height 화면의 높이를 1/100쪼갠 크기*/
+        #v1 {
+            height: 100vh;
+        }
+
+        #v2 {
+            width: 100vw;
+        }
+        /* viewport의 너비와 높이 중 큰 값을 1/100 쪼갠 크기 */
+        #v3 {
+            height: 100vmin;
+        }
+

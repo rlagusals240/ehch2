@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>누르는 버튼</title>
+</head>
+<body>
+    <form>
+        <!--네모난 칸에 입력을 넣을 수 있는것-->
+      text(기본값)  <input type="text"><br>
+      text(value)  <input type="text" value="값"> <br>
+      text(placeholder)  <input type="text" placeholder=플레이스홀더> <br>
+      text(readonly)  <input type="text" value="값" readonly ="readonly"> <br>
+      text(readonly)  <input type="text" value="값" disabled ="disabled"> <br>
+
+      password : <input type="password" name="pw"  placeholder=플레이스홀더><br>
+    <br>
+
+
+    <!--1111111111111한 가지를 선택할수 있는것1111111111111111111111111111-->
+    <!--checked 미리 선택되어있는것-->
+    radio :
+    <input type="radio" name="gender" value="male">남자
+    <!-- <input type="radio" name="gender" value="female" disabled="disabled">여자 -->
+    <input type="radio" name="meet" value="female">여자
+    <input type="radio" name="gender" value="mile" >비공개
+    
+    <br>
+        <input type="radio" name="meet">참석
+        <input type="radio" name="gender">미참석
+        <br>
+
+        submit : <input type="submit" value="전송">
+        <br>
+
+        <!--여러가지를 선택할 수 있는 것-->
+        checkbox :
+        <input type="checkbox" value="1">생크림
+        <input type="checkbox" value="2">민트맛
+        <input type="checkbox" value="3">샷추가
+        <input type="checkbox" value="4">초코칩
+        <br>
+        <input type="checkbox" value="5" id="pearl">
+        <label for="pearl">펄추가label</label>
+
+        <!--파일을 선택만하는 것-->
+        file :
+        <input type="file" name="file" accep="jpg, png, hif">
+        <br>
+
+        <!--input 누를수있는 버튼-->
+        button : <input type="botton" value="이거 버튼임"
+        reset : <input type="reset">
+        <br>
+        button : <button type="botton" value="이거 버튼">버튼</button>
+        <br>
+        <br>
+        <br>
+       date": <input type="date" value="2025-12-12"><br>
+        <input type="color"><br>
+        <input type="number">
+        <input 
+        type="range" min="0" max="100" step="10">
+        <br>
+        <br>
+       
+        <fieldset>
+        <legend>제목</legend>
+        글씨들
+</fieldset>
+ required, autocomplite:<input type="text" required="required" autocomplite="off">
+        <br>
+        <textarea rows="10" cols="100">
+            1줄
+     2줄
+        </textarea>
+                    <br>
+                    <br>
+        <!--size는 말 그대로 사이즈 측정해준다-->
+        <select name="lunch" size="5" multiple="multiple">
+            <option value="한식">한식</option>
+            <option value="2">양식</option>
+            <option value="2">양식</option>
+            <option value="2">양식</option>
+            <option value="2">양식</option>
+            <option value="2">양식</option>
+            <option value="2">양식</option>
+            <option value="2">양식</option>
+            <option value="2">양식</option>
+            <option value="2">양식</option>
+            <option value="2">양식</option>
+            <option value="2">양식</option>
+            <option value="2">양식</option>
+            <option value="3" selected="selected">야식</option>
+            <option>분식</option>
+       
+        </select>
+
+    </form>
+
+    <!-- form을 두 개 넣는 건 안된다 -->
+       <!-- formd의 method 종류 : get, post 
+        method의 기본값 : get
+        
+        action : 전송할 주소
+        action의 기본값 : 지금 내 주소-->
+        <!--value는 값을 넣는것-->
+    <form method="get" action="https://search.naver.com/search.naver">
+        <input type="text" name="query">
+        <input type="submit" value="네이버 검색">
+
+
+    </form>
+    <!--action은 서버로 이동할 수 있는 코드-->
+    <form method="get" action="https://www.google.com/search">
+        <input type="text" name="query">
+        <input type="submit" value="구글 검색">
+
+
+    </form>
+
+  <!--포스트 연습-->
+    <form method="post">
+  <input type="text" name="query" value="213214">
+  <input type="submit" value="네이버 검색">
+  </form>
+ 
+
+
+                    <!--네이버 만들기-->
+                
+                 
+
+</body>
+</html>
