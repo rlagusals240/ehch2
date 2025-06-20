@@ -70,10 +70,21 @@ public class KeyCodeExam {
        System.out.println("x값을 입력하시오 :");
         int input2 = scan.nextInt();
        System.out.println("입력한 x값:" + input2);
+       ////////////////////////////////
+       
+       
+			for (int j = 1; j <= 5; j++) {
+				for (int i = 1; i <= j; i++) {
+				System.out.print("*");
+					
+		
        
 	}
+       
 
 }
 
 
-
+	}
+	
+}

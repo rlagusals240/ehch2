@@ -1,0 +1,83 @@
+package chap05;
+
+public class EnumExam01 {
+
+	public static void main(String[] args) {
+
+		Week week;
+		
+		Week week_m = Week.월;
+//		Week week_m = "월요일";
+//		Week week_m = "월";
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		if(week_m == Week.월) {
+			System.out.println("월요일");
+				} else if(week_m == Week.화) {
+				System.out.println("화요일");
+			}
+		
+		
+		
+	}
+	
+}
