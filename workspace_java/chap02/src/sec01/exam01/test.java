@@ -4,8 +4,13 @@ public class test {
 
 	public static void main(String[] args) {
 
+<<<<<<< HEAD
 		{
 			int a = 10;
+=======
+	}
+			int a = 10;   
+>>>>>>> origin/main
 			int b = 20;
 			int c = a + b;
 			System.out.println("a: " + a);
@@ -21,7 +26,12 @@ public class test {
 			int e = 10;
 			System.out.println("e: " + e);
 		}
+<<<<<<< HEAD
 
+=======
+		
+		
+>>>>>>> origin/main
 		{
 			int f = 10;
 			System.out.println("f: " + f);
@@ -30,6 +40,7 @@ public class test {
 
 			int a = 10;
 			System.out.println("a: " + a);
+<<<<<<< HEAD
 		}
 
 		// int x1 = 26845; int x3 = x1; int x1 = x2;
@@ -184,3 +195,28 @@ public class test {
 		
    }
 }
+=======
+		
+		}
+		
+		//int x1 = 26845;  int x3 = x1; int x1 = x2;
+				//int x2 = 684684;     int x2 = x3
+				/*
+				*
+				*/
+				//System.out.println("x1 : " + x1); // 684684
+				//System.out.println("x2 : " + x2); // 26845
+		
+		double total = 4.3;
+		int count = 4;
+		double result1 = total / count;
+		System.out.println("1¹ø result1: "+(result1 * 10000));
+		
+		
+		
+		
+	}
+
+}
+
+>>>>>>> origin/main

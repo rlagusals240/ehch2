@@ -108,6 +108,9 @@
 			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
 	</section>
+<<<<<<< HEAD
 	<section name="ExternalProjectImportWizard">
 	</section>
+=======
+>>>>>>> origin/main
 </section>

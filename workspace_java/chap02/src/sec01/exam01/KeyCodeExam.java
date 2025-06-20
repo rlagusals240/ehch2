@@ -70,6 +70,7 @@ public class KeyCodeExam {
        System.out.println("x값을 입력하시오 :");
         int input2 = scan.nextInt();
        System.out.println("입력한 x값:" + input2);
+<<<<<<< HEAD
        ////////////////////////////////
        
        
@@ -81,10 +82,18 @@ public class KeyCodeExam {
        
 	}
        
+=======
+       
+	}
+>>>>>>> origin/main
 
 }
 
 
+<<<<<<< HEAD
 	}
 	
 }
+=======
+
+>>>>>>> origin/main

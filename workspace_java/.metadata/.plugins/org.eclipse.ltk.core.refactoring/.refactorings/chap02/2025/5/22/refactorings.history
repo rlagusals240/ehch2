@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <session version="1.0">&#x0A;<refactoring accessors="true" comment="Delete element from project &apos;chap01&apos;&#x0D;&#x0A;- Original project: &apos;chap01&apos;&#x0D;&#x0A;- Original element: &apos;sec01.exam01.가지고노는방.java&apos;" description="Delete element" element1="/src&lt;sec01.exam01{가지고노는방.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1748333507307" subPackages="false" version="1.0"/>&#x0A;<refactoring accessors="true" comment="Delete element from project &apos;chap02&apos;&#x0D;&#x0A;- Original project: &apos;chap02&apos;&#x0D;&#x0A;- Original element: &apos;sec01.exam01.dklfaf0000.java&apos;" description="Delete element" element1="/src&lt;sec01.exam01{dklfaf0000.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1748429205040" subPackages="false" version="1.0"/>
+=======
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;chap01&apos;&#x0D;&#x0A;- Original project: &apos;chap01&apos;&#x0D;&#x0A;- Original element: &apos;sec01.exam01.가지고노는방.java&apos;" description="Delete element" element1="/src&lt;sec01.exam01{가지고노는방.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1748333507307" subPackages="false" version="1.0"/>
+>>>>>>> origin/main
 </session>
