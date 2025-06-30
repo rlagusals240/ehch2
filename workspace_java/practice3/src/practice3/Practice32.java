@@ -116,12 +116,13 @@ public class Practice32 {
 		////////////////////////////////////////////
 		{
 			System.out.println("문제");
-		}
+		
 		int a = 0;
 		for (int x = 3; x > 0; x--) {
 			a = a + x;
 			System.out.println(a);
 		}
+	}
 		////////////////////////////
 		{
 			System.out.println("문제");
@@ -136,12 +137,29 @@ public class Practice32 {
 
 		////////////////////////////////////
 		{
-			System.out.println("문제");
-			for (int x = 0; x < 5; x++) {
-				for (int  = 0;  < 5; a++) {
-
-				}
+			System.out.println("문제 1번");
+			int a1 = -3;
+			if(a1 < 0) {
+				System.out.println("음수입니다");
+			}else {
+				System.out.println("양수입니다");
 			}
+		}
+		///////////////////////////////////
+		{
+			System.out.println("문제 2번");
+			int a = 0;
+			if(a==0) {
+				System.out.println("0일때");
+			}else if(a % 2==0){
+				System.out.println("짝수아니다");
+			}else {
+				System.out.println("홀수일때");
+			}
+		}
+		///////////////////////////////////
+		{
+			
 		}
 	}
 }

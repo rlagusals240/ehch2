@@ -219,13 +219,17 @@ public class practice {
 //			System.out.println(a+e + "니 보단 커 시발아");
 //		}
 		//////////////////////////////////
-		System.out.println("문제 5번");
+		{
+			System.out.println("문제 5번");
+		
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
 		int y = sc.nextInt();
 		
 		int result = Math.abs(x - y);
-			System.out.println(x-y + "니보단 커 시발아");
+			System.out.println(x-y + "그러지");
+		}
+			//////////////////////////////////
 		}
 	}
 

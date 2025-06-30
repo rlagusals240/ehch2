@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>흘러넘친다</title>
+    <style>
+        .p{
+            border: 1px solid red;
+            height: 87px;
+            width: 100px;
+            margin: 10px;
+        }
+        .hidden{
+            overflow: hidden;
+        }
+
+        .scroll{
+            overflow: scroll;
+        }
+
+        .auto{
+            overflow: auto;/* 한  */
+            /* overflow: scroll; */
+        }
+
+        .parent {
+            border: 1px solid red;
+            width: 300px;
+            white-space: nowrap; /* 한 줄로 만들기 */
+            overflow: auto; /* 몰라 */
+            
+        }
+        .parent div {
+            border: 1px solid rgb(66, 20, 158);
+            display: inline-block;
+            width: 100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="p hidden" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum facilis ad quo quisquam rem recusandae! Et error eius voluptatibus ipsam odit. Repellendus laborum accusantium quia, qui ducimus perferendis veniam.">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum facilis ad quo quisquam rem recusandae! Et error eius voluptatibus ipsam odit. Repellendus laborum accusantium quia, qui ducimus perferendis veniam.
+    </div>
+
+    <div class="p scroll">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum facilis ad quo quisquam rem recusandae! Et error eius voluptatibus ipsam odit. Repellendus laborum accusantium quia, qui ducimus perferendis veniam.
+    </div>
+    <!--title 글씨에 마우스를 올려놓으면 자식 글씨가 생긴다-->
+    <div class="p auto" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum facilis ad quo quisquam rem recusandae! Et error eius voluptatibus ipsam odit. Repellendus laborum accusantium quia, qui ducimus perferendis veniam."><!--잘 확인해-->
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde harum facilis ad quo quisquam rem recusandae! Et error eius voluptatibus ipsam odit. Repellendus laborum accusantium quia, qui ducimus perferendis veniam. -->
+         Lorem ipsum
+    </div>
+
+
+    <div>
+        <div class="parent">
+        <div>항목1</div>
+        <div>항목2</div>
+        <div>항목3</div>
+        <div>항목4</div>
+        <div>항목5</div>
+        </div>
+    </div>
+</body>
+</html>

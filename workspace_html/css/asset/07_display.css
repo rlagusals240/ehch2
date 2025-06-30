@@ -1,0 +1,83 @@
+
+/* body는 전체를 좌지우지한다 */
+body {
+margin: 0 auto;
+}
+
+
+.block{
+    border: 1px solid lightblue;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+
+}
+
+#div{
+    border: 1px solid black;
+}
+
+.inline {
+    border: 1px solid red;
+    /* 너비 높이가 없다  */
+     /* width: 200px;
+    height: 50px;  */
+
+    /* 좌우만 되고 위아래 안됨 */
+    margin: 30px 50px;
+
+    /* 좌우만 되고 위아래 안됨. 단, border는 밀어짐 */
+    padding: 20px;
+
+    /* display: inline-block; */
+}
+
+.bg_blue {
+    background-color: rgb(22, 221, 208);
+    color: #ffffff;
+}
+
+ /* 부모가 지정되있음 */
+.parent {
+    border: 1px dotted red;
+    /* width: 400px; */
+    /* width: 200px; */
+    width: 100%;
+}
+
+/* 자식이 지정되있음 */
+.parent > div {
+    border: 1px dotted lightseagreen;
+
+
+    /* width: 40%; */
+    height: 50px;
+
+    display: inline-block;
+
+    /* inline, inline-block만 적용 됨 */
+    vertical-align: top;
+}
+
+.hide {
+    /* 숨겨주는것 */
+    display: none;
+}
+
+.table {
+   display: table;
+   border: 1px solid blue;
+   width: 300px;
+   margin: 20px;
+   padding: 20px;
+}
+
+.table .td {
+    display: table-cell;
+    border: 1px solid red;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+
+    vertical-align: middle;
+}

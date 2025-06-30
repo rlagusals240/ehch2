@@ -38,7 +38,7 @@
         }
 
         .text1:focus{
-            background-color: rgba(187, 178, 10, 0.966);
+            background-color: rgba(80, 26, 206, 0.966);
             font-size: 20px;
 
         }
@@ -79,7 +79,7 @@
         } */
 
        li, h3, #a1 {
-            border: 1px solid rgb(179, 181, 28);
+            border: 1px solid rgb(14, 8, 136);
         }
 
         /* 바로 아래 자식 요소 만 */
@@ -100,12 +100,12 @@
         }
 
         tr {
-            background-color: rgb(187, 29, 92);
+            background-color: rgb(69, 44, 178);
         }
 
         /* 속성 존재 여부  */
         [href]{
-            color: rgb(35, 126, 182);
+            color: rgb(32, 6, 136);
         }
 
         /* 속성과 값이 모두 일치하는 요소 */
@@ -127,7 +127,7 @@
         }
 
         input[type=password]:focus {
-            background-color: yellow;
+            background-color: rgb(56, 14, 133);
         }
 
         a:hover
@@ -166,7 +166,7 @@
         }
 
         span{
-            background-color:yellow !important;
+            background-color:rgb(215, 180, 23) !important;
         }
 
         

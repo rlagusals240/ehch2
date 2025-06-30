@@ -4,16 +4,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>네이버</title>
 </head>
 
+<style>
+
+    body{
+        border: 1px solid blue;
+    }
+
+    input{
+        font-size: 30px;
+       border: 1px solid green;
+    }
+
+    #di{
+        background-color: #aab2bd;
+        width: 300px;
+        height: 60px;
+        font-size: 30px;
+        width: 500px;
+        margin-left: 50px;
+        
+    }
+
+    td{
+        font-size: 20px;
+     
+        
+    }
+
+    h1{
+         color: green;
+         font-size: 100px;
+         /* text-align: center; */
+         margin-left: 10px;
+
+       
+         
+    }
+
+     input[type=checkbox]{
+            height: 20px;
+           width: 20px;
+        }
+
+        button{
+            color: #ffffff;
+            
+        }
+
+</style>
+
 <body>
-   <table>
+    <h1 style=" text-align: center;">NAVER</h1>
+     <!-- <div style="text-align: center;">
+        <h1>NAVER</h1> -->
+    </div>
+   <table >
+    <!-- 111111111111111111111111111111111 가로 첫번째 줄 -->
     <tr>
         <td>
-            
+           <input type="radio" name="네이버"> ID/전화번호
         </td>
+
+         <td>
+            <input type="radio" name="네이버">일회용 번호
+        </td>
+
+        <td>
+            <input type="radio" name="네이버">QR코드
+        </td>
+
     </tr>
+
+    <!-- 2222222222222222222222222222222 가로 두번째 줄 -->
+
+    <tr>
+
+        <td>
+            <input type="text" placeholder="아이디 또는 비밀번호" 
+             style="height: 50px;">
+        </td>
+
+         <td rowspan="2">
+            <input type="text" placeholder="번호를 입력하세요" 
+             style="height: 50px;">
+        </td>
+
+        <td>
+            <img src="data:image/jpeg;base64, iVBORw0KGgoAAAANSUhEUgAAAMgAAADIAQAAAACFI5MzAAACAklEQVR42tWYPY6DUAyEjSgoOcK7Sd7FkEDKxZKbcARKCoR3xob8FCkzu5sCPfGlsDz22A/zTz/7y2Q3/Kpf5263cbYGp5WvhKR3Xy/91f3WBx5sre6zkkzH8c6UNL6V9WKtmvC4Wu8zTma/QeoyMjsTXifWEuoDVbo7sS9DeVNOQFiQqJB5fT5eqldAsikXK76jUDtHl7x18PcJY0MwyMkpjSNPQ1ESVAPCwuMh0p2h6kgfjTk6Ygtszz7VEEhjCKZlcficvnkzZkdFWBfGtrBmGVMfO6PWEeRk5INRskXdp6IjnhGhOG6s0eqTdfQvIeHxzmDCLTkxOv5bR/YcEejThkZp1MdSHx0poUqXfZrzcypaYnVpHbG17JJMlgkJZlbEtjbRorALiHROMxWJsM6lYShx0hF6FYoScwL6lI6udeijIy0TA0FudC2G1e1HbCoyYlpjSAU2jo0sVBmhUVq0aEjDarVzq1ERCEJz4qSyGBuvE11B+i3W5rxJxLBAdjZTkkOQ1OfCYeFHn8qI5+Ya15hKw6Jp60jsq4+5zeXRPPxLRnKPj7nNO21N1xpMSOiWlWvzsUfFGjnOShI3Stylo1mbJbq01ROuUOgXeNVWLK75akKH6mN5vMZNwpQkvm3E8EZYlSax9y9fPb5PskZ5l7H22ONfb7vfJ//z+9tH8gMB5APj813QHQAAAABJRU5ErkJggg==" width="100" height="100"
+            >
+        </td>
+
+    </tr>
+
+    <!-- 333333333333333333333333333333333333333 가로 세번째 줄 -->
+   
+    <tr>
+
+        <td>
+             <input type="password" placeholder="비밀번호"
+             style="height: 50px;">
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+            <input type="checkbox">
+            로그인 상태 유지
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+
+        </td>
+
+      <td>
+            <button type="submit" id="di">로그인</button>
+     </td>
+
+    </tr>
+
    </table>
 </body>
 </html>

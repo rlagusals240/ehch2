@@ -1,0 +1,140 @@
+
+@font-face {
+    font-family: 'Galmuri11-Condensed';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2506-1@1.0/Galmuri11-Condensed.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#p1 {
+    color: red;
+    /* text-decoration: line-through; */
+    /* 밑줄을 그어주는것 글자에 */
+    text-decoration: underline;
+    font-family: 'Galmuri11-Condensed';
+}
+
+#a1 {
+    /* 이거는 밑에 줄을 없애주는것 */
+    /* text-decoration: none; */
+}
+
+input[type=checkbox]:checked + span {
+    /* 글자 가운데에 선을 그어 주는것 */
+text-decoration: line-through;
+color: gray;
+}
+
+.size{
+
+    /* 글씨 크기 변경( px, em, %) */
+
+    /* 기본사이즈는 보통 16px*/
+
+    /* font-size: small; */
+
+    /* 기본사이즈에 2배 */
+    /* font-size: 32px; */
+
+    /* 퍼센트를 이렇게도 사용할 수있다 */
+    font-size: 2em;
+}
+
+.style{
+
+    font-style: italic;
+}
+
+em{
+    /* 이건 기울게 하지않는것 */
+    font-style: normal;
+}
+
+.fw-100 {
+    /* 글씨 두께 변경 */
+    font-weight: 100;
+}
+
+/* 400이 기본값이다 */
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.fw-2000 {
+    font-weight: 2000;
+}
+
+/* 글자 굵게 해주는것 */
+.fw-bold {
+    font-weight: bold;
+}
+
+.fake-h1 {
+    font-size: 2em;
+}
+
+.align-right {
+    text-align: right;
+     border: 1px solid red;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.align-left{
+    text-align: left;
+}
+
+/* 양쪽으로 글자가 있는 것 */
+.justify {
+    border: 1px solid red;
+    text-align: justify;
+}
+
+.spacing {
+    letter-spacing: -0.1em;
+    /* letter-spacing: 1em; */
+}
+
+.h {
+    line-height: 200%;
+}
+
+.middle{
+border: 1px solid red;
+height: 100px;
+/* 줄 간격을 의미하는것 
+   중앙이나 세로를 박스안에서 지정하는 것 */
+ line-height: 100px;
+ text-align: center;
+}
+
+.nowrap {
+    /* 한 줄로 정렬해주는것 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    border: 1px solid red;
+}
+
+.text{
+    border: 1px solid red;
+    width: 200px;
+}
+
+/* 글씨가 밖으로 튀어나가는것을 튀어나가지 않게
+해 주는 것 */
+.word-wrap{
+    word-wrap: break-word;
+}
+
+.word-break{
+    word-break: break-all;
+}
