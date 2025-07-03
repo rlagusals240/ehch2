@@ -18,11 +18,13 @@
             /* flex-direction: row-reverse; */
 
             /* flex-direction: column; */
+
             /* 위에서 아래쪽으로  위에서 아래로 바꿔준다 */
             /* flex-direction: column-reverse; */
 
             /* 기본값, 한줄에 모든 item을 표시하려고 노력 */
             /* flex-wrap: nowrap; */
+
             /* inline-block처럼 넘치는 경우 다음 줄로 */
             /* flex-wrap: wrap; */
 
@@ -34,6 +36,7 @@
 
             /* main축 가운데 정렬 */
             /* justify-content: center; */
+
             /* 간격 사이사이를 배치시킴 */
             /* justify-content: space-between; */
 
@@ -63,24 +66,29 @@
             align-content: space-between;
             align-content: space-evenly; */
 
-
-        }
+         }
         .flex-container .flex-item{
             border: 1px solid red;
             background-color: brown;
             color: white;
 
             width: 200px;
+            flex-grow: 1;
         }
-    </style>
+    </style> 
 </head>
-<body>
-    <div class="flex-container">
-    <div class="flex-item">1</div>
-    <div class="flex-item">2</div>
+ <body> 
+     <div class="flex-container">
+        <!--쉬링크가 0이면 안늘어난다 -->
+    <div class="flex-item" style="flex-shrink: 0; align-self: start;">1</div>
+    <div class="flex-item" style="order: 2;">2</div>
     <div class="flex-item">3</div>
-    <div class="flex-item">4</div>
-    <div class="flex-item">5</div>
+    <!--자식을 늘리거나 줄어들게 하는것 밑에는 4번은 1을 5번은 2를 주는것-->
+    <div class="flex-item" style="flex-grow: 4;" style="flex-shrink: 4;" min-width: 60px;>4</div>
+    <!--순서를 바꾸는 코드이다 order는 숫자가 클수록 먼저 나온다-->
+    <div class="flex-item" style="order: -1;">5</div>
+    <!-- <div class="flex-item">4</div>
+    <div class="flex-item">5</div> -->
   </div>
 </body>
 </html>
