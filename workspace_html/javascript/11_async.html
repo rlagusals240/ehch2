@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        fn1();
+        function fn1(){
+            console.log('fn1 실행')
+             
+
+            fn2();
+            console.log('fn2 호출 끝')
+        }
+        function fn2(){
+            console.log('fn2 실행') 
+            
+            fn3();
+            fn3();
+
+            console.log('중간에 낀 것1')
+            setTimeout( function(){
+                console.log('중간에 낀 것2')
+            }, 0 )
+            setTimeout( function(){
+                console.log('중간에 낀 것3')
+            }, 0 )
+
+
+            fn3(); // 몇 초 뒤에 나오는 셋타임을 넣었기 때문에 얘는 뒤에 썼어도 바로 나온다
+            fn3();
+        }
+        
+        function fn3(){
+            console.log('fn3 실행')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

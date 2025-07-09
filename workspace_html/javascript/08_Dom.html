@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현민아 열심히하자</title>
+    <style>
+        #view {
+            color: red;
+
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .big{
+            font-size: 2em;
+        }
+        [data-food=마라] {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Dom 연습</h1>
+
+    <div id="view">첫번째 #view</div>
+    <div id="view">두번째 #view</div>
+
+    <div class="div2">첫번째 .div2</div>
+    <div class="div2">두번째 .div2</div>
+
+    <!-- css : #parent .div2 -->
+    <div id="parent">
+        <div class="child div2" data-fo="마라">안쪽 .div2</div>
+        <!-- <div class="div2">안쪽 .div2</div> -->
+    </div>
+
+    <img alt="짱구" src="https://i.pinimg.com/originals/15/71/c7/1571c7597f2418b65f1008f7dd8da8ec.jpg">
+
+    <script>
+        // document : html 문서 전체를 뜻함
+
+        // getElementById : 
+        //      속성 id의 값을 이용해서 dom을 가져온다
+        let title = document.getElementById('title')// 잘 안쓰지만 알아두면 좋다
+        console.log(title)
+        console.log("---------------","" + title)
+
+        // 요소가 없는 경우 null <div>에 id선언
+        let test = document.getElementById('test')
+        console.log( test ,'-------------------')
+
+        // id가 여러개인 경우 첫번째 DOM만 가져온다
+        document.getElementById('view')
+        console.log( view )
+
+        // tag 명으로 DOM 찾기
+        // 일치하는 모든 DOM을 배열로 돌려준다
+        // 클래스아니고 아이디 아니고 그냥 변수명을 출력하는것 getElementsByTagName
+       let divs = document.getElementsByTagName('div');
+       console.log( divs )
+
+        // 하나만 있어도 한 개 짜리 배열
+       let h1s = document.getElementsByTagName('h1');
+       console.log( h1 )
+
+        // 없어도 size가 0인 배열
+        let human = document.getElementsByTagName('human');
+        console.log( human )
+
+       let div2s = document.getElementsByClassName('div2');
+       console.log(div2s)
+
+       // document : 문서 전체에서~
+        let parent = document.getElementById('parent');
+        console.log(parent)
+        // 특정 DOM 안에서 찾기
+       let div2ss = parent.getElementsByClassName('div2')
+        console.log(div2ss)
+
+        // querySelector
+        //  css 선택자를 이용할 수 있다
+        // 하나의 DOM만 돌려준다
+        // 여러개인 경우 처음 나온 DOM 하나만
+        // 없으면 null
+
+        // 이건 클래스에 있는 아이디랑 클래스를 가져올수 있는것
+        let qs1 = document.querySelector('#parent .div2')
+        console.log(qs1)
+
+         
+        console.log('---------------')
+        let qs2 = document.querySelector('.div2')
+        console.log(qs2)
+
+
+        // querySelectorAll
+        //   배열로 돌려준다
+        //    없으면 size 0 배열
+       let qs3 = document.querySelectorAll('.div2')
+        console.log(qs3)
+
+
+        // class 속성 값 조작
+        let child = document.querySelector('#parent .div2')
+        // classList : class를 배열 형식으로 돌려줌
+        console.log( child.classList );
+
+        // add : class 값 추가
+        child.classList.add('blue');
+        child.classList.add('big');
+        
+        // 중복해서 추가되지 않는다
+        child.classList.add('big');
+        
+        // remove : class 값 삭제
+        child.classList.remove('blue');
+        child.classList.remove('big');
+        
+
+        // 있으면 삭제 없으면 추가임 있는게 remove 없으면 add
+        child.classList.toggle('blue');
+        child.classList.toggle('blue');
+        
+        
+        
+       let isblue = child.classList.contains('blue');
+       console.log(isblue)
+
+       // DOM.className : 모든 class를 문자로 돌려줌
+       console.log(child.className)
+       child.className = 'big'
+
+
+        if(isblue){
+            child.classList.remove('blue');
+        }else {
+            child.classList.add('blue');
+        }
+
+        // []이 괄호는 내가 만든 클래스와 이름을 가져올 수 있는것이다
+        document.querySelector('[data-food=마라]')
+
+       let img = document.querySelector('img');
+
+       // 속성명이 있는지 검사
+      let isSrc = img.hasAttribute('src');
+       console.log('isSrc :', isSrc)
+       
+       // 속성이 없으면 null
+    let src2 = img.getAttribute('src2');
+       console.log('src2 :', src2)
+
+    //    a[href]
+        // setAttribute(속성명, 속성값)
+        //          속성이 없으면 속성을 만들고
+        //           속성이 있으면 값을 덮어쓴다
+        //            이미지 뒤에 나온다
+        img.setAttribute('data-human', '1강의실')
+        img.setAttribute('data-huma', '10강의실')
+
+
+        setTimeout(function(){
+        img.setAttribute('src',"https://linefriendssquare.com/cdn/shop/files/colley-office---38885151211719.jpg?v=1709141906&amp;width=1445")
+
+        // 3초라는 뜻
+        }, 3000)
+
+        //속성 지우기
+        // 이미지 밑에 나오는 이름을 삭제하는것
+        img.removeAttribute('data-human')
+
+        // 이미지 지우는 작용을 함
+        img.remove()
+        </script>
+</body>
+</html>

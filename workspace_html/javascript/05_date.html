@@ -38,7 +38,7 @@
 
 
 
-
+      
 
 
         let iso = now.toISOString()
@@ -46,8 +46,10 @@
 
         // 
         let a = iso.split('T')
-        console.log(a[0])
-        console.log (a[1].split('.')[0])
+        
+        console.log (a)
+        console.log ('지금이다', a[1].split('.')[0])
+        console.log ('지금이다2', a[1].split(':'))
 
         // 1970년도 부터 지금까지 센 숫자
         let timestamp = now.getTime();

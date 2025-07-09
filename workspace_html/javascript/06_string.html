@@ -5,38 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let str = '저녁에 뭐 어디가 뭐하냐고';
-
+        
+        let str = '저녁에뭐어디가뭐하냐고';
         console.log('str.length :', length);
-
+        
         // indexOf
         // 전달인자와 동일한 글씨가 있는 경우 
         //       첫번째 만나는 요소의 첫 index를 돌려 줌
         // 동일한 글씨가 없을 경우 -1
         console.log( str.indexOf('저녁') )
         console.log( str.indexOf('어') )
-
+        
         // replace
         // 첫번째 전달인자를 두번째 전달인자로 바꿔 줌
         // 기본적으로 처음 만나는 것만 한 번 바꿔줌
-        let str2 = str.replace('저녁', '회식')
+        // 지금이다 저녁에회식어디가뭐하냐고 이런식으로 바뀐다
+        let str2 = str.replace('뭐', '회식')
         console.log(str)
-        console.log(str2)
+        console.log('지금이다',str2)
         
-        let str3 = str.replace(/저녁/g, '회식')
+        // 지금이다2 저녁에회식어디가회식하냐고 이런식으로 바뀐다
+        let str3 = str.replace(/뭐/g, '회식')
         console.log(str)
-        console.log(str3)
-
-        // 시작, 끝 바로 앞
-        let str4 = str.substring(2, 7);
+        console.log('지금이다2',str3)
+        
+        // 시작, 끝 바로 앞에까지
+        let str4 = str.substring(0, 5);
         console.log(str)
-        console.log(str4)
-
+        console.log('지금 :',str4)
+        
         // 시작, 몇 개
-        let str5 = str.substr(3, 5);
+        // 에뭐어디가뭐 이런식으로 바뀐다
+        let str5 = str.substr(2, 6); //인덱스3번부터 5글자개수만큼 센다
         console.log(str)
         console.log(str5)
-    </script>
+
+        // 어떤 이메일이라도 id를 출력하도록
+        let mail = 'study.rlagusals0978@gmail.com';
+        // @를 찾는다 : indexOf
+        // @로 나눈다 : split
+
+
+        // rla 6글자부터 9글자까지 즉, substring은 개수 3글자를 가져온다 
+        let mail2 = mail.substring(6, 9)
+        console.log(mail2)
+
+        let idx = mail.indexOf('@');
+        let id = mail.substring(0, idx)
+        console.log(id)
+
+        // @로 나눈다 : split
+        let mails = mail.split('@')
+        console.log(mails[0])
+
+        // rlagusals
+        let mail3 = mail.substr(0, 19)
+        console.log(mail3)
+
+        // 2번
+        // 메일 주소 앞 두자리를 제외한 id는 *처리
+        // 김현민0978지메일닷컴 >> 김***@지메일 닷컴
+
+        // 변수를 지정하고 숫자만 바꿔주기 위함
+        let showCut = 3;
+        // 앞글자 0부터 2글자까지 나타내고
+        let id2 = mail.substr(0, 2) // to
+        // 
+        let count = id.length - 2;
+        for(let i=0; i<count; i++){
+            id2 += '*'
+        }
+        id2 += mail.substring(idx);
+        console.log(id2)
+
+        // let mail4 = 'study.rlagusals0978@gmail.com'; // 이메일
+
+        // 1 도메인 시작 위치 찾기
+        // let domainStart = email.indexOf("지메일");
+
+        // 2 아이디랑 도메인 나누기
+        // let id1 = email.substring(0, domainStart); // 김현민0978
+        // let domain = email.substring(domainStart); // 지메일 닷컴
+
+        // 3 아이디 마스킹 ( 앞 2글자만 보이게 )
+
+        // let wow = "*".repeat(3);
+        //  console.log(wow);  // 와와와
+
+         // 4 최종 출력 만들기
+
+        //  let result = visible + stars + '@지메일 닷컴'; // 공백 넣어서 보기 좋게
+
+        // 3번
+        // 인터넷 주소 중 2차 도메인 
+        // 즉 comic.naver.com에서 naver
+        // human.or.kr에서 or
+        let domain = 'a.comic.naver.com'
+       let dot1 = domain.indexOf('.');
+       domain = domain.substring(dot1 + 1) // 맨 앞글자를 자르든 말든 한다
+       let dot2 = domain.indexOf('.');
+        domain.substring(0,dot2)
+        console.log( domain )
+
+    </script>   
 </head>
 <body>
     

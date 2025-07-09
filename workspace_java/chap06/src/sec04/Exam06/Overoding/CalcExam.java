@@ -9,10 +9,10 @@ public class CalcExam {
 		
 		calc.plus(1, 2);
 		calc.plus(1.5, 2.7);
-		
-		System.out.println("¹®ÀÚ");
+		calc.set("cc");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½");
 		System.out.println(1);
-
+ 
 //		calc.plus(1 , 2.5);
 	}
 

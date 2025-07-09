@@ -2,6 +2,8 @@ package practice3;
 
 import java.util.Scanner;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 public class Practice32 {
 
 	public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class Practice32 {
 			int[] a = new int[10];
 
 			for (int x = 0; x < 10; x++) {
-				a[x] = x + 1;
+				a[x] = x + 1; // 배열 0부터 시작하기 때문
 				if (a[x] % 2 == 0) {
 					System.out.println(a[x]);
 				}
@@ -158,8 +160,43 @@ public class Practice32 {
 			}
 		}
 		///////////////////////////////////
-		{
-			
+//		{
+//			System.out.println("문제 3번");
+//			int today = 2;
+//			int yes = -3;
+//			if(today>0 & yes>0) {
+//				System.out.println("오늘 온도는 ");
+//			}else {
+//				System.out.println("거짓입니다");
+//			}
+//		}
+		
+		////////////////////////////////
+
+		int x1 = 10;
+		int y1 = 20;
+		int x2 = 90;
+		int y2 = 100;
+		int x3 = 50;
+		int y3 = 120;
+		if(x3 > x1 && x3 < x2 && y3 > y1 && y3 < y2) { 
+			System.out.println("둘 다 맞을 경우");
+		}else if( ! (x3 > x1 && x3 < x2) && (y3 > y1 && y3 < y2)) {
+			System.out.println("x가 맞지않고 y만 맞을경우");
+		}else if((x3 > x1 && x3 < x2) && !(y3 > y1 && y3 < y2)) {
+			System.out.println("여기선 x만 맞을 경우 y가 안맞을 경우");
 		}
+		else {
+			System.out.println("전체가 틀린 경우");
+		}
+		for(int i =1; i <=5; i++) {
+			   for(int j = 1; j<=5; j++) {
+				  System.out.print("아이"+i);
+				  System.out.print("제이"+j);
+			   }
+			}
+		
 	}
 }
+
+	 

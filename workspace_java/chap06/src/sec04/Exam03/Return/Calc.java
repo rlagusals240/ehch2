@@ -2,22 +2,23 @@ package sec04.Exam03.Return;
 
 public class Calc {
 
-	// µÎ ¼ö¸¦ ÀÔ·Â ¹Þ¾Æ ´õÇÑ °á°ú¸¦ µ¹·ÁÁÖ´Â ¸Þ¼Òµå plus
+	// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Þ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½ plus
 
 	int plus(int x, int y) {
-		System.out.println("int int ½ÇÇà");
+		System.out.println("int int ï¿½ï¿½ï¿½ï¿½");
 		return x + y;
 	}
 	
 	double plus(double x, double y) {
-		System.out.println("´õºí ´õºí ½ÇÇà");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		return x + y;
 	}
 	
 	String name;
 	String address;
+	
 	void set(String name) {
-		
+		int a = x+y
 	}
 }
 	

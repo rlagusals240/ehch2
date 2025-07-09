@@ -41,10 +41,10 @@
             // index '주소'처럼 숫자가 아닌 index는 못 가져옴
             // 현재 몇번째 반복인지 알 수 없다
             // let i = 0;
-            // for(let obj of arr){
-            //     console.log("obj :", obj, i++)
-            //     // console.log("index :", arr[index])
-            // }
+            for(let obj of arr){
+                console.log("obj :", obj,)
+                // console.log("index :", arr[index])
+            }
 
             // let array = [];
             // if(array[4] == undefined){
@@ -71,10 +71,7 @@
         //         [${i}, $
         //     }
         //    }
-        console.log(diceSum[i])
-           for( let i in diceSum ){
-            console.log(i, diceSum[i])
-           }
+        
 
             // a
             // console.log('array[2] : ', array[2]);
@@ -103,6 +100,35 @@
 
     //     }
     // }
+
+    console.log(diceSum[i])
+           for( let i in diceSum ){
+            console.log(i, diceSum[i])
+           }
+
+           // 함수 배우고 돌아옴
+           console.log('함수 배우고 돌아옴')
+
+           const arr3 = ["a1",'b2','c3','d4']
+           let r1 = arr3.forEach( function(element,index,array) {
+             console.log('element :',element)   // 이번 값
+             console.log('index:',index)            // 이번 index
+             console.log('array :',array)           // 원본 배열
+             console.log('d :',d) 
+           })
+           console.log('r1 : ',r1)
+           
+
+           const movies = [
+            '노이즈',
+            'F1 더 무비',
+            '쥬라기 월드: 새로운 시작',
+            '드래곤 길들이기',
+            '엘리오'
+        ]
+
+            let len = movies.map( e1 => e1.length )
+            console.log( 'len :', len )
     </script>
 </head>
 

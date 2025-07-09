@@ -63,9 +63,12 @@
         let g = "console.log(123)";
         eval(g);   // string을 javascript로 변환
 
-        function print() {
+        function print(x,y) {
+             let  a = x+y;
             console.log('print 실행')
         }
+        print(3,5)
+         
         let p = print;
         console.log('typeof p :', typeof p)
         p();
@@ -98,8 +101,8 @@
         }
 
         // 달러원 환율 계산 함수
-        function change_en_en(won) {
-            return won * 1354.75;
+        function change_ko_en(won) {
+            return won / 1354.75;
         }
 
         // 환전 함수
@@ -116,8 +119,11 @@
             let result = callback(money)
             return result;
         }
-        const money = change(40, change_en_ko); //  소수점으로 계산
+        const money = change(60, change_en_ko); //  소수점으로 계산
         console.log('환전된 금액은', money); // 출력
+        
+        const mon = change(1354.75, change_ko_en); //  소수점으로 계산
+        console.log('환전된 금액은', mon); // 출력
 
         // 익명 함수
         let noName = function () {
@@ -210,7 +216,7 @@
         let test6 = (a, b) => a + b;
 
         let test7 = a => a * 3;
-        console.log('하', test7(9))
+            console.log('하', test7(9))
 
 
 
@@ -222,3 +228,7 @@
 </body>
 
 </html>
+
+
+        
+
