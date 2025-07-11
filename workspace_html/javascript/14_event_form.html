@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="/javascript/asset/14_event_form.js"></script>
+    <style>
+        #parent {
+            background-color: yellow;
+            padding: 10px;
+        }
+        #child1 {
+            background-color: rgb(94,255,0);
+        }
+    </style>
 </head>
 <body>
      <!-- 검색을 하면 네이버에서 검색창이 뜸 -->
@@ -16,6 +25,13 @@
         </select>
         <button type="submit">검색</button>
     </form>
+
+        <div id="parent">
+            부모
+            <div id="child1">자식1</div>
+            <div id="child1">자식2</div>
+        </div>
+
     <!-- 글씨 몇개 -->
 
      <!-- 여러개의 checkbox이 있을 때
@@ -30,6 +46,7 @@
             문제 2-2
             전체 선택 후 하나라도 해제되면 전체 선택도 해제
             전체 선택이 해제 된 경우에도 모든 요소 선택 시 전체 선택 체크-->
+
     <div>
         피자 토핑
         <hr>
@@ -46,5 +63,130 @@
     <div>
         토핑 : 베이컨, 치즈, 옥수수 
     </div>
+
+    <h2> 🍎 과일 목록</h2>
+    <ul id="fruitsList">
+        <!-- 여기에 JavaScript로 과일 추가할 거임 -->
+    </ul>
+
+    <script>
+        document.querySelector('[type=button]').addEventListener('click',function(){
+            // console.log(123)
+            // 선택한 토핑의 값을 따로 출력
+            // 1. 선택한 토핑들을 가져오기
+        //    let list_chk = document.querySelector('.chk:checked')
+            let list_chk = document.querySelectorAll('.chk')
+           for(let i=0; i<list_chk.length; i++){
+            // list_chk[i].checked
+                // console.log(i, list_chk[i].checked)
+                if(list_chk[i].checked == true){
+                    console.log(list_chk[i].value)
+                }
+           }
+        //    console.log(list_chk)
+            // 2. 값을 출력 
+        })
+    </script>
+
+<input type="number" class="chk" data-fruit="바나나"> <!--<span class="result"></span><br>-->
+        <input type="number" class="chk" data-fruit="포도"> <!--<span class="result"></span><br>-->
+        <input type="number" class="chk" data-fruit="수박"> <!--<span class="result"></span><br>-->
+        <input type="number" class="chk" data-fruit="참외"> <!--<span class="result"></span><br>-->
+
+        <!-- <h3>관심 항목</h3> -->
+
+        <!-- 전체 선택 체크박스 -->
+        <!-- <input type="checkbox" id="checkAll"> 전체 선택<br><br> -->
+
+        <!-- 개별 체크박스들 -->
+        <!-- <input type="checkbox" class="chk"> 사과<br>
+  <input type="checkbox" class="chk"> 바나나<br>
+  <input type="checkbox" class="chk"> 포도<br>
+  <input type="checkbox" class="chk"> 수박<br>
+  <input type="checkbox" class="chk"> 참외<br> -->
+
+        <!-- <script>
+    // 전체 선택 체크박스
+    const checkAll = document.querySelector('#checkAll');
+    // 개별 체크박스들
+    const checkboxes = document.querySelectorAll('.chk');
+
+    // 전체 선택 클릭했을 때
+    checkAll.addEventListener('change', function () {
+      checkboxes.forEach(function (checkbox) {
+        checkbox.checked = checkAll.checked;
+      });
+    });
+  </script> -->
+
+        <!-- <h1>좋아하는 과일 아저씨</h1>
+
+                <!-- 박스 전체 선택 -->
+        <!-- <input type="checkbox" id="checboxAll">전체 선택<br><br> -->
+
+        <!-- 개별 체크박스들 -->
+
+        <!-- <input type="number" class="chk"> 바나나<br>
+                <input type="number" class="chk"> 포도<br>
+                <input type="number" class="chk"> 수박<br>
+                <input type="number" class="chk"> 참외<br> -->
+
+        <!-- <script>
+                    // 전체 선택 체크박스
+                    // const checkAll = document.querySelect('#checkAll');
+                    // 개별 체크박스들
+                    // const checkboxes = document.querySelectorAll('.chk');
+
+                    // 전체 선택 클릭했을 때
+                    // checAll.addEventListener('change',function(){
+                        // checkboxes.forEach(function (checkbox){
+                            // checkbox.checked = checAll.checked;
+                        });
+                     });
+                 </script> -->
+
+        
+
+
+        <!-- <input type="number" class="chk" data-fruit="바나나"> <span class="result"></span><br>
+        <input type="number" class="chk" data-fruit="포도"> <span class="result"></span><br>
+        <input type="number" class="chk" data-fruit="수박"> <span class="result"></span><br>
+        <input type="number" class="chk" data-fruit="참외"> <span class="result"></span><br> -->
+
+
+        
+                
+            
+
+
+        <script>
+            // 과일 개수를 입력받는 모든 input 요소(.chk)를 선택해서 inputs에 저장
+            // const inputs = document.querySelectorAll('.chk');
+
+            //     //  각 input 요소를 하나씩 반복하면서
+            // inputs.forEach(function (input, index) {
+            //     // input 값이 바뀔 때마다 실행되는 함수 등록
+            //     input.addEventListener('input', function () {
+            //         const fruitName = input.dataset.fruit;
+            //         const count = parseInt(input.value);
+            //         const resultSpan = document.querySelectorAll('.result')[index];
+
+            //         if (!isNaN(count) && count > 0) {
+            //             resultSpan.innerText = fruitName.repeat(count);
+            //         } else {
+            //             resultSpan.innerText = ''; // 숫자가 0이면 아무것도 안 보여주기
+            //         }
+            //     });
+            // });
+
+            
+        // const inputs = document.querySelector('.chk')
+        //     for(let i=0; i<inputs.length; i++){
+        //         const fruit = inputs.data
+        //     }
+
+        
+        </script>
+
 </body>
 </html>

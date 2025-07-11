@@ -70,6 +70,78 @@ document.querySelector('#keyword')
                 
             })
 
-                                                                                                 
+            //     // 선택 버튼을 클릭하면 실행됨
+            // document.querySelector('.chk_all').addEventListener('change',function(){
+            //     // 체크된 항목만 모으기 (.chk:checked 는 선택된 것만 골라줌)
+            //     const chekedboxes = document.querySelectorAll('.chk:checked');
 
-}
+            //     // 선택된 토핑을 담을 배열
+            //     let selected = [];
+
+            //     // forEach로 선택된 체크박스를 하나씩 꺼냄
+            //     chekedboxes.forEach(function(box){
+            //         selected.push(box.value);
+            //     });
+
+            //     //결과를 화면에 출력 (문자열로 바꿔서 보여줌)
+            //     document.querySelector('#result').innerHTML = '토핑 :'  + selected.join(',');
+            // });
+
+
+                    // forEach를 써서 각각 하나씩 에라이로 만들어낸 것
+            //     let fruits = ['사과', '바나나', '포도'];
+            //     let ultag = document.querySelector('#fruitList');
+
+            //     fruits.forEach(function(item){
+            //  // <li>사과</li> 이런 태그 하나씩 만들고 ul에 추가
+            //  let li = document.createElement('li'); // <li> 생성
+            //         li.textContent = item; // 내용 채우기
+            //         ultag.appendChild(li); // ul 붙이기
+            //     })
+
+            // 배열 선언
+            // let fruits = ['사과','바나나','포도'];
+            // let ultag = document.querySelector('#fruitsList');
+            // console.log('ultag:', ultag)
+            // // for문으로 배열 돌리기
+            // for(let i=0; i< 2; i++){
+            //     let li = document.createElement( 'li' ); // <li>생성
+            //     li.textContent = fruits[i];            // 배열값 채우기
+            //     ultag.appendChild(li);                 // <ul> 추가
+            // }
+
+            // 콜백을 화살표함수로 하면 this는 여전히 window로 유지됨
+            document.querySelector('#parent')
+                .addEventListener('click', function(){
+                console.log('부모 클릭')
+
+                //event.target : 이벤트
+                console.log('event.target : ', event.target)
+                // event.currentTarget : 이벤트가 적용된 DOM
+                console.log('event.currentTarget : ', event.currentTarget)
+
+                console.log('event.target.parentNode :', event.target.parentNode )
+                console.log('event.target.parentNode.parentNode :', event.target.parentNode.parentNode )
+            }, true)
+            // document.querySelector('#child1')
+            //     .addEventListener("click", function(event){
+
+            //         // event.preventDefault()
+            //         // 전파 방지
+            //         // 부모로 전달되는 이벤트 중지 자식을 누르면 자식부터 나오게하는 코드다
+            //         // event.stopPropagation()
+
+            //     console.log('자식1 클릭')
+            //     // 이벤트 안에서 this는 
+            //     // 더이상 window가 아니다
+            //     // js에서 this는 뭔지 알고 있을 때만 사용하세요
+                console.log(this)
+            //     })
+                
+                // this : window 객체를 가지고 있다
+            console.log( this )
+            console.log( this === event.currentTarget)
+
+
+} 
+

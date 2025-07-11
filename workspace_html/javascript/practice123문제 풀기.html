@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #one{
+        width: 170px;
+        padding-left: 20px;
+       }
+        
+       #two{
+        width: 170px;
+        padding-left: 20px;
+       }
+
+       .tv{
+        margin-left: 20px;
+       }
+       
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" class="msg" placeholder="입력">
+        <input type="button" id=but1 value="신청">
+        <div id="mon">
+
+        </div>
+    </div>
+    <hr>
+    <br>
+    <br>
+    
+
+    <h2>주문자 정보</h2>
+
+    <div id="one">
+        <input type="text" class="text1" placeholder="주문자" required>
+
+        <input type="text" class="text2" placeholder="연락처" required>
+
+        <input type="text" class="text3" placeholder="주소지" required>
+             <!-- <button type="submit" class="bt1">등록</button> -->
+            
+    </div>
+              <input type="checkbox" class="tv">주문자정보같음
+    <h2>배송 정보</h2>
+    <div id="two">
+        <input type="text" class="text4" placeholder="배송자" required>
+
+        <input type="text" class="text5" placeholder="연락처" required>
+        
+        <input type="text" class="text6" placeholder="주소지" required>
+             <!-- <button type="submit" class="bt2">등록</button> -->
+        
+    </div>
+
+
+    <!-- <div>
+         <input type="text" id="member"> 
+         <input type="button" id="apply" value="신청">
+         <fieldset>
+            <legend>신청자 목록</legend>
+            <div class="list"></div>
+         </fieldset>
+    </div> -->
+
+
+    <script>
+
+        // 1번퀴즈
+        window.addEventListener('load',function(){
+            
+        })
+
+        function init(){
+            quiz1();
+        }
+
+        function quiz1(){
+        document.querySelector('#apply')
+            .addEventListener('click',function(){
+             let name = document.querySelector('#name')
+
+            })
+        }
+
+        // 1번 문제 풀었다 
+        window.addEventListener('load', bind)
+        //1번
+        function bind() {
+            const time = document.querySelector('.msg')
+            const tim = document.querySelector('#mon')
+            const t = document.querySelector('#but1')
+
+            // 버튼을 클릭했을때 이벤트가 발생
+            t.addEventListener('click', function () {
+                const time = document.querySelector('.msg').value
+                tim.innerHTML = tim.innerHTML + '<br>' + time;
+                })
+
+                //////////////////////////////////////////////////////
+
+                // 2번문제
+                const in1 = document.querySelector('.text1')
+                const in2 = document.querySelector('.text2')
+                const in3 = document.querySelector('.text3')
+                const in7 = document.querySelector('.tv')
+                // const in4 = document.querySelector('.bt1')
+                const tom = querySelectorAll(input)
+                
+                
+                const in4 = document.querySelector('.text4')
+                const in5 = document.querySelector('.text5')
+                const in6 = document.querySelector('.text6')
+                // const in8 = document.querySelector('.bt2')
+                
+
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
