@@ -5,129 +5,54 @@ public class for01 {
 	public static void main(String[] args) {
 
 		{
-			System.out.println("ÇÇ¶ó¹Ìµå 0´Ü°è");
-			for (int x = 1; x <= 5; x++)
+			System.out.println("í”¼ë¼ë¯¸ë“œ 1ë‹¨ê³„");
+			for (int a = 1; a <= 5; a++) {
 				System.out.println("+");
+			}
 		}
-		///////////////////////////////////////////
+		///////////////////////////////////
 		{
-			System.out.println("ÇÇ¶ó¹Ìµå 1´Ü°è");
-			for (int x = 1; x <= 5; x++)
+			System.out.println("í”¼ë¼ë¯¸ë“œ 2ë‹¨ê³„");
+			for (int a = 0; a < 5; a++) {
 				System.out.print("+");
-		}
-		////////////////////////////////////////////
-		{
-			System.out.println();
-			System.out.println("ÇÇ¶ó¹Ìµå 2´Ü°è");
-			for (int x = 1; x <= 5; x++)
-				System.out.print("+" + ".");
-		}
-		////////////////////////////////////////////
-		{
-			System.out.println();
-			System.out.println("ÇÇ¶ó¹Ìµå 3´Ü°è");
-			for (int x = 1; x <= 3; x++) {
 				System.out.println();
-				for (int a = 1; a <= 5; a++) {
-					System.out.print("+");
-				}
 			}
 		}
-		///////////////////////////////////////
-		{
+		//////////////////////////////////
+		System.out.println("í”¼ë¼ë¯¸ë“œ 3ë‹¨ê³„");
+		for (int a = 1; a <= 5; a++) {
 			System.out.println();
-			System.out.println("ÇÇ¶ó¹Ìµå 4´Ü°è");
-			for (int x = 1; x <= 5; x++) {
-				System.out.println();
-				for (int a = 1; a <= 5; a++) {
-					System.out.print(x);
-				}
+			for (int b = 1; b <= a; b++) {
+				System.out.print("*");
 			}
 		}
-		//////////////////////////////////////
+		System.out.println();
+		////////////////////////////////
 		{
-			System.out.println();
-			System.out.println("ÇÇ¶ó¹Ìµå 5´Ü°è");
-			for (int x = 1; x <= 5; x++) {
-				System.out.println();
-				for (int a = 1; a <= x; a++) {
-					System.out.print(x);
-				}
-			}
-		}
-		/////////////////////////////////////////
-		{
-			System.out.println();
-			System.out.println("ÇÇ¶ó¹Ìµå 6´Ü°è");
-			for (int x = 1; x <= 5; x++) {
-				System.out.println();
-				for (int a = 1; a <= x; a++) {
-					System.out.print("+");
-				}
-			}
-		}
-		//////////////////////////////////////
-		{
-			for (int x = 5; x >= 1; x--) {
-				System.out.println();
-				for (int a = 1; a <= 5; a++) {
+			System.out.println("í”¼ë¼ë¯¸ë“œ 4ë‹¨ê³„");
+			
+			for (int a = 1; a <= 5; a++) {
+				for (int b = 1; b <= (5-a); b++) {
+					System.out.print(" ");
+					for(int c = 1; c <= a; c++) {
+						System.out.print("*");
+					}
 					System.out.println();
 				}
 			}
 		}
-		int[][] aa = { { 1, 2, 3 }, { 4, 5, 6, 7 }, { 8, 9 } };
-		System.out.println(aa[0][1]);
 
-		System.out.println();
-
-		int[] sc = new int[10];
-		System.out.println(sc[0]);
-		for (int x = 0; x <= 9; x++) {
-			sc[x] = x + 1;
-			System.out.println(sc[x]);
-
-		}
-		System.out.println();
-		int[] c = new int[10];
-		System.out.println(c[0]);
-		for (int x = 0; x <= 9; x++) {
-			c[x] = x + 1;
-			System.out.println(c[x]);
-		}
-		int[] d1 = { 1, 2, 3, 4, 5 };
-		int[] d2 = d1;
-		int[] d3 = { 1, 2, 3, 4, 5 };
-		System.out.println("d1 == d2 : " + (d1 == d2));
-		System.out.println("d1 == d3 : " + (d1 == d3));
-
-		d2[1] = 10;
-		System.out.println("d1[1] : " + d1[1]); // d1ÀÇ 10ÀÌ
-	}
-
-	{
-		System.out.println();
-		System.out.println("ÇÏ");
-		int[] a = { 1, 2, 3 };
-		int[] b = new int[3];
-
-		for (int x = 4; x > 0; x--) {
-			a[x] = x - 1;
-			System.out.println(x);
-		}
-
-	}
-
-	////////////////////////////////////////
-	{
-			System.out.println("¹®Á¦ ¹è¿­");
-			
-			int[] s = new int [10];
-			for(int c = 0; c < s.length; c++) {
-				s[c] += c;
-				if(s[c] %2 == 0) {
-					System.out.println(c);
-				}
+		/////////////////////////////////////////
+		System.out.println("í”¼ë¼ë¯¸ë“œ 5ë‹¨ê³„");
+		int line = 5;
+		for(int x=0; x<5; x++) {
+			for(int y=1; y<(line-x); y++) {
+				System.out.print(" ");
 			}
+			for(int c=0; c<(2*x)+1; c++) {
+				System.out.print("*");
+			}
+			System.out.println();
 		}
-
+	}
 }

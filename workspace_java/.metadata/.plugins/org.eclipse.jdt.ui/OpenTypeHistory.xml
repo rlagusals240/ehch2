@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+    <typeInfo handle="=chap07/src&lt;sec01.exam03.override{Calc.java[Calc" modifiers="1" timestamp="1752731298935"/>
+    <typeInfo handle="=chap07/C:\/Users\/admin\/Downloads\/openjdk-17+35_windows-x64_bin\/jdk-17\/lib\/jrt-fs.jar`java.base=/module=/true=/&lt;java.lang(Object.class[Object" modifiers="33" timestamp="1748222541799"/>
+    <typeInfo handle="=chap07/src&lt;sec02.exam01{Parent1_1.java[Parent1_1" modifiers="1" timestamp="1752807164307"/>
+    <typeInfo handle="=chap07/src&lt;sec02.exam01{Parent1.java[Parent1" modifiers="1" timestamp="1752804568449"/>
+</typeInfoHistroy>

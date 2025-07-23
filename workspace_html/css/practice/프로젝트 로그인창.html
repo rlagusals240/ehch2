@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .all{
+            margin-top: -50px;
+        }
+        /* 로그인창 박스생성 */
+        .order {
+            /* border: 1px solid red; */
+            width: 310px;
+            height: 10px;
+            margin: 300px 650px;
+
+        }
+
+        h1 {
+            /* border: 1px solid red; */
+            /* height: 0px; */
+            width: 260px;
+            position: absolute;
+            margin: -100px 690px -100px;
+            color: darkorange;
+            font-size: 55px;
+        }
+
+        /* 체크박스를 생성 */
+        .checkbox {
+            border: 1px solid red;
+            margin-top: 10px;
+            margin-left: -91px;
+            transform: scale(2.2);
+            /*박스크기를 키워주는 역할*/
+            display: flex;
+        }
+
+        /* 체크박스 옆에 글씨를 생성함 */
+        p {
+            /* border: 1px solid red; */
+            width: 230px;
+            margin: -30px 10px 10px -70px;
+            font-size: 25px;
+        }
+
+        /* 글씨에 밑줄을 생성함 */
+        p:hover {
+            text-decoration: underline;
+        }
+
+        /* 로그인버튼 생성 */
+        .btn1 {
+            font-size: 23px;
+            height: 50px;
+            width: 530px;
+            margin-left: -100px;
+            cursor: pointer;
+        }
+
+        /* 아이디와 비번을 생성 */
+        .ppt {
+            width: 523px;
+            height: 50px;
+            text-align: center;
+            font-size: 23px;
+            margin: 10px -100px 20px;
+        }
+
+        /* 아이디와 비번의 테두리 색깔을 바꾼것 */
+        .ppt:focus {
+            outline: none;
+            border: 2px solid darkgoldenrod;
+        }
+
+        /* 아이디 비번 찾기 회원가입 박스생성 */
+        .linkbox {
+            color: lemonchiffon;
+            width: 500px;
+            margin-left: -76px;
+        }
+
+        /* 아이디 비번 찾기 회원가입 생성 */
+        .link {
+            margin: 0 15px;
+            cursor: pointer;
+            font-size: 27px;
+            color: darkgoldenrod;
+            padding-bottom: 3px;
+        }
+
+        /* 찾기와 회원가입의 밑줄을 만든것 */
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        /* 체크박스를 생성한 클래스 */
+    </style>
+    
+</script>
+</head>
+
+<body>
+    <div class="all">
+                    <h1>지역유치원</h1>
+    <div class="order">
+        <input type="text" class="ppt" placeholder="아이디">
+        <input type="text" class="ppt" placeholder="비밀번호">
+   <label>
+            <input type="checkbox" class="checkbox">
+                    <p>아이디 저장</p>
+   </label>
+               <button class="btn1">로그인</button>
+
+   <div class="linkbox">
+            <span class="link">아이디찾기</span>
+            <span class="link">비밀번호찾기</span>
+            <span class="link">회원가입</span>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -59,9 +59,9 @@ public class pri {
 			}
 		}
 		///////////////////////////////////
-		{
-			System.out.println("문제 10번");
-			for(int )
-		}
+//		{
+//			System.out.println("문제 10번");
+//			for(int )
+//		}
 	}
 }

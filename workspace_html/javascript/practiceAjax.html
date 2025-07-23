@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        window.addEventListener('load', bind)
+        function bind() {
+            document.querySelector('#btn1')
+                .addEventListener('click', function () {
+                    const xhr = new XMLHttpRequest(); // ① 요청 객체 만들기
+                    xhr.open("GET", "data.json");     // ② 어떤 파일 가져올지 설정
+                    xhr.onload = function () {        // ③ 불러오면 실행할 함수
+                        if (xhr.status === 200) {
+                            const data = JSON.parse(xhr.responseText); // JSON 문자열 → JS 객체
+                            document.getElementById("info").innerHTML =
+                                `이름: ${data.name}, 나이: ${data.age}`;
+                        }
+                    }
+                })
+        }
+
+        xhr.send(); // ④ 요청 보내기
+    </script> -->
+
+
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+        window.onload = function () {
+            const addressbutton = document.querySelector('#btn');
+
+            addressbutton.addEventListener('click', function () {
+                new daum.Postcode({
+                    oncomplete: function (data) {
+                        // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+                        // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+                        console.log(data)
+                    }
+                }).open();
+
+            })
+
+        }
+    </script>
+</head>
+
+<body>
+    주소 찾기 : <input type="text" id="addr">
+    <button type="button" id="btn">주소 찾기</button>
+    <!-- * 카카오맵 - 지도퍼가기 -->
+<!-- 1. 지도 노드 -->
+<div id="daumRoughmapContainer1752558810878" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+<!--
+    
+설치 스크립트
+지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+<!-- 3. 실행 스크립트 -->
+<script charset="UTF-8">
+    new daum.roughmap.Lander({
+        "timestamp" : "1752558810878",
+        "key" : "5o7gozvfejr",
+        "mapWidth" : "640",
+        "mapHeight" : "360"
+    }).render();
+</script>
+    <!-- <div id="info">데이터 불러오는 중...</div> -->
+</body>
+
+</html>
