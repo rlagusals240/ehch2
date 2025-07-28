@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Section</title>
+    <style>
+        /* CSS: 메인 컨테이너 (두 섹션을 모두 포함) 스타일 */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif; /* 권장 글꼴 */
+            background-color: #f0f2f5; /* 페이지의 밝은 배경색 */
+            display: flex;
+            flex-direction: column; /* 세로 정렬 */
+            align-items: center; /* 가로 중앙 정렬 */
+            min-height: 100vh;
+        }
+
+        /* 상단 네비게이션 바 스타일 */
+        .top-nav {
+            width: 100%;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box; /* 패딩과 테두리를 요소의 전체 너비와 높이에 포함 */
+        }
+
+        .top-nav .left-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .top-nav .left-section .logo-btn {
+            background: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .top-nav .left-section .logo-btn:hover {
+            background-color: #eee;
+        }
+
+        .top-nav .search-bar {
+            flex-grow: 1; /* 검색 바가 공간을 채우도록 */
+            display: flex;
+            justify-content: center;
+        }
+
+        .top-nav .search-bar input {
+            width: 400px;
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        .top-nav .search-bar .search-icon {
+            margin-left: -35px; /* 검색 아이콘 위치 조정 */
+            padding: 8px;
+            cursor: pointer;
+            color: #777;
+        }
+
+        .top-nav .right-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .top-nav .right-section .login-signup-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* 하단 서브 내비게이션 바 스타일 */
+        
+
+        .sub-nav button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            color: #555;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .sub-nav button:hover {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+
+        /* 메인 컨테이너 (두 섹션을 모두 포함) 스타일 */
+        .toy {
+            border: 2px solid #999; /* 옅은 회색 테두리 추가 (더 명확하게 2px로 변경) */
+            border-radius: 10px; /* 메인 박스에 둥근 모서리 추가 */
+            padding: 20px; /* 메인 박스 내부에 패딩 추가 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content; /* 콘텐츠 너비에 맞게 조정 */
+            /* height: auto; 이미지에 맞게 높이 조정 */
+            font-family: 'Inter', sans-serif; /* 권장 글꼴 */
+            background-color: #fff; /* 메인 박스 배경색 흰색 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 메인 박스에 부드러운 그림자 추가 */
+            margin-top: 20px; /* 상단 네비게이션과의 간격 */
+            position: relative; /* `tong` 제목의 절대 위치 기준점 */
+        }
+
+        /* Styles for the "로그인" heading (placed above the main box) */
+        /* "로그인" 제목 스타일 (메인 박스 위에 배치) */
+        .main-login-title {
+            position: absolute; /* 절대 위치 지정 */
+            top: 0; /* toy 상단에 맞춤 */
+            left: 20px; /* toy 왼쪽에서 20px 오른쪽으로 */
+            font-size: 2em; /* 글씨 크기 키움 */
+            font-weight: bold; /* 글씨 굵게 */
+            color: #333; /* 글씨 색상 */
+            transform: translateY(-50%); /* 요소를 자신의 높이의 절반만큼 위로 이동 */
+            background-color: #f0f2f5; /* 배경색과 동일하게 설정하여 박스 테두리 위로 올라온 것처럼 보이게 함 */
+            padding: 0 10px; /* 배경색이 적용될 패딩 */
+            z-index: 1; /* 다른 요소 위에 겹치도록 z-index 설정 */
+            white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+        }
+
+        /* Styles for the "펼치기" button */
+        /* "펼치기" 버튼 스타일 */
+        .expand-button {
+            position: absolute; /* 절대 위치 지정 */
+            top: 0; /* toy 상단에 맞춤 */
+            right: 20px; /* toy 오른쪽에서 20px 왼쪽으로 */
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            transform: translateY(-50%); /* 요소를 자신의 높이의 절반만큼 위로 이동 */
+            z-index: 1; /* 다른 요소 위에 겹치도록 z-index 설정 */
+        }
+
+        .expand-button:hover {
+            background-color: #333;
+        }
+
+        /* Styles for the left-hand login form section */
+        /* 왼쪽 로그인 폼 섹션 스타일 */
+        .lip {
+            padding: 20px;
+            margin-right: 10px; /* 로그인 섹션과 구분선 사이의 간격 */
+            padding: 30px; /* 내부 패딩 조정 */
+        }
+
+        /* Styles for the "로그인" text below the heading */
+        /* 제목 아래의 "로그인" 텍스트 스타일 */
+        .log {
+            text-align: left;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Styles for the checkbox container */
+        /* 체크박스 컨테이너 스타일 */
+        .box {
+            font-weight: bold;
+            margin-left: 60%;
+            margin-bottom: -20px;
+            color: #666;
+            white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+        }
+
+        /* Styles for input fields */
+        /* 입력 필드 스타일 */
+        .ip,
+        .ipt {
+            width: 330px;
+            padding: 10px;
+            margin-bottom: 9px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-sizing: border-box; /* 패딩과 테두리를 요소의 전체 너비와 높이에 포함 */
+        }
+        /* Specific margin for ID input */
+        /* 아이디 입력 필드의 특정 마진 */
+        .ip {
+            margin-left: 35px;
+        }
+        /* Specific margin for Password input */
+        /* 비밀번호 입력 필드의 특정 마진 */
+        .ipt {
+            margin-left: 20px;
+        }
+
+        /* Styles for "아이디" and "비밀번호" 라벨 */
+        /* "아이디"와 "비밀번호" 라벨 스타일 */
+        .thick {
+            font-weight: bold;
+            color: #555;
+            margin-top: 15px;
+        }
+
+        /* Styles for the main login button and "회원가입" button */
+        /* 메인 로그인 버튼 및 "회원가입" 버튼 스타일 */
+        .login {
+            display: block;
+            width: 95%;
+            height: 45px;
+            border-radius: 30px;
+            margin-top: 20px;
+            margin-left: 11px;
+            cursor: pointer;
+            background-color: #777; /* 명암 대비를 위해 약간 어두운 회색으로 변경 */
+            color: white;
+            border: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease; /* 호버 효과를 위한 부드러운 전환 */
+        }
+
+        .login:hover {
+            background-color: #5a5a5a;
+        }
+
+        /* Styles for "공동인증서 로그인" and "금융인증서 로그인" buttons */
+        /* "공동인증서 로그인" 및 "금융인증서 로그인" 버튼 스타일 */
+        .twologin {
+            width: 180px;
+            cursor: pointer;
+            border-radius: 20px;
+            margin: 25px 20px 10px 0px;
+            padding: 10px;
+            margin-left: 20px;
+            background-color: white;
+            border: 1px solid #ccc; /* 옅은 테두리 추가 */
+            font-size: 14px;
+            color: #555;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .twologin:hover {
+            background-color: #5a5a5a;
+            color: white;
+            border-color: #5a5a5a;
+        }
+
+        /* Container for the two certification login buttons */
+        /* 두 개의 인증서 로그인 버튼 컨테이너 */
+        .twoparent {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+
+        /* Styles for the vertical line separator */
+        /* 수직 구분선 스타일 */
+        .line {
+            width: 3px;
+            background-color: #ccc;
+            height: 290px;
+            margin: 13% 30px 0px 30px; /* 간격 조정을 위한 마진 조정 */
+        }
+
+        /* Styles for the right-hand text and buttons section */
+        /* 오른쪽 텍스트 및 버튼 섹션 스타일 */
+        .textbs {
+            color: #666;
+            margin: 30% 0px 22% 10px; /* 원래 마진, 반응형을 위해 조정 고려 */
+            text-align: left;
+            padding: 30px; /* 내부 패딩 조정 */
+        }
+
+        .textbs h1 {
+            color: #333;
+            margin-bottom: 10px;
+            margin-left: 15px;
+            line-height: 1.3;
+            
+        }
+
+        .textbs h3 {
+            color: #555;
+            margin-bottom: 40px;
+            margin-left: 20px;
+            line-height: 1.5;
+        }
+
+        /* Container for "아이디 찾기" and "비밀번호 재설정" buttons */
+        /* "아이디 찾기" 및 "비밀번호 재설정" 버튼 컨테이너 */
+        .two {
+            margin: -4px -10px 12px -1px; /* 원래 마진, 조정 고려 */
+            display: flex;
+            justify-content: flex-start; /* 버튼을 시작점에 정렬 */
+            gap: 10px; /* 버튼 사이의 간격 */
+            margin-top: 8px;
+        }
+        
+        /* 기존의 lip h1 스타일 제거 */
+        .lip h1 {
+            display: none; /* .main-login-title이 대신 사용되므로 숨김 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단 네비게이션 바 -->
+    <div class="top-nav">
+        <div class="left-section">
+            <button class="logo-btn">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path d="M.002 11.884a1 1 0 0 1 .633-.865c.539-.217 1.25-.57 2.15-.992l-.757-1.513c-.638-.769-1.254-1.29-2.022-1.745-.885-.515-1.076-.902-.756-1.577.32-.674.988-1.03 2.073-1.03 1.055 0 1.934.33 2.89.923l.142.083c.703.411 1.01.657 1.8.657s1.097-.246 1.8-.657l.14-.08c.957-.594 1.835-.924 2.89-.924 1.085 0 1.753.356 2.073 1.03.32.675.129 1.062-.756 1.577-.768.455-1.384.976-2.022 1.745l-.757 1.513c.9.422 1.611.775 2.15.992a1 1 0 0 1 .633.865V15H.002zM15 12H1v2h14z"/>
+                </svg>
+                로고
+            </button>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="검색">
+            <button class="search-icon">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </button>
+        </div>
+        <div class="right-section">
+            <button class="login-signup-btn">로그인 | 회원가입</button>
+        </div>
+    </div>
+
+    <!-- 하단 서브 네비게이션 바 -->
+    <div class="sub-nav">
+        <button>로그인 | 회원가입</button>
+        <button>로그인 | 회원가입</button>
+        <button>자격증 / 확인서</button>
+        <button>고객 지원</button>
+    </div>
+
+    <div class="toy">
+        <!-- 가장 상단에 위치할 "로그인" 제목 -->
+        <h1 class="main-login-title">로그인</h1>
+        <!-- "펼치기" 버튼 -->
+        <button class="expand-button">펼치기</button>
+
+        <!-- Login Form Section -->
+        <!-- 로그인 폼 섹션 -->
+        <div class="lip">
+            <div class="pri">
+                <p class="log">로그인</p>
+            </div>
+            <div class="box">
+                <span class="typing">
+                    <input type="checkbox" class="checkbox">키보드 보안 적용 여부
+                </span>
+            </div>
+            <br>
+            <p class="thick">아이디<input type="text" class="ip"></p>
+            <p class="thick">비밀번호<input type="password" class="ipt"></p>
+            <button class="login">로그인</button>
+            <div class="twoparent">
+                <button class="twologin">공동인증서 로그인</button>
+                <button class="twologin">금융인증서 로그인</button>
+            </div>
+        </div>
+
+        <!-- Vertical Separator Line -->
+        <!-- 수직 구분선 -->
+        <div class="line"></div>
+
+        <!-- Right-hand Information and Action Section -->
+        <!-- 오른쪽 정보 및 액션 섹션 -->
+        <div class="textbs">
+            <h1>포털 회원이 되시면 <br>다양한 혜택을 누리실 수 있습니다</h1>
+            <h3>아이디가 있으시면 동일한 아이디와 비밀번호로
+                <br>포털 사이트의 서비스를 이용하실 수 있습니다
+            </h3>
+            <button class="login">회원가입</button>
+            <div class="two">
+                <button class="twologin">아이디 찾기</button>
+                <button class="twologin">비밀번호 재설정</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
